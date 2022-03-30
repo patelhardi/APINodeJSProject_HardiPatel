@@ -1,0 +1,8 @@
+extends layout
+
+block layout-content
+  h2.page-title #{title}
+  form(action="/listings", method="get", id="form") 
+    label Enter City Name: 
+    input(type="text" id="name", name="name")
+    input(type="submit", value="Submit")

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+/* Header and Footer */
+#header, #footer{
+  margin: 10px 0;
+  padding: 10px;
+  background-color: lightgray;
+  text-align: center;
+}
+/* Main Content */
+#main{
+  padding: 10px;
+  margin: 5px;
+}
+/* Form and Table */
+#form, table{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+input[type=text]{
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+} 
+label{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+input[type=submit]{
+  background-color: gray;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  float: center;
+  margin: 5px;
+}
+td, th{
+  padding: 10px;
+  text-align: center;
+}
+#content{
+  padding: 10px;
+  font-weight: bold;
+}
+/* Image Section */
+#image-container{
+  display: flex;
+  flex-direction: row;
+}
+img{
+  flex: 1 0 0;
+  margin: 10px;
+}
+/* Links */
+h3 a{
+  text-decoration: none;
+  color: red;
+}
+h3 a:hover{
+  text-decoration: underline;
+}
+/* Responsive Design for Mobile Screen 620px */
+@media screen and (max-width: 620px) {
+  #image-container{
+    display: flex;
+    flex-direction: column;
+  }
+  #header, #footer, #map, img{
+    width: 100%;
+    height: auto;
+  }
+}

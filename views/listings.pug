@@ -1,0 +1,21 @@
+extends layout
+
+block layout-content
+  h2.page-title #{title}
+  table 
+    thead 
+      tr
+        th Property Class 
+        th Property Type 
+        th Price 
+        th Status
+        th 
+    tbody 
+      each l in list
+        tr 
+          td #{l.class}
+          td #{l.type}
+          td #{l.listPrice}
+          td #{l.status}
+          td 
+            a(href=`/details/${l.mlsNumber}`) View Details

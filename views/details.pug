@@ -1,0 +1,26 @@
+extends layout
+
+block layout-content
+  h2.page-title #{title}
+  div
+    - if(`${detail.details.numRooms}` === "null" || `${detail.details.numRooms}` === "[object Object]" || `${detail.details.numRooms}` === "" || `${detail.details.numRooms}` === "{}")
+      div(id="content") Number of Rooms: "No Content to display"
+    -else
+      div(id="content") Number of Rooms: #{detail.details.numRooms}
+    - if(`${detail.details.numKitchens}` === "[object Object]" || `${detail.details.numKitchens}` === "null" || `${detail.details.numKitchens}` === "" || `${detail.details.numKitchens}` === "{}")
+      div(id="content") Number of Kitchen: "No Content to display"
+    -else
+      div(id="content") Number of Kitchen: #{detail.details.numKitchens}
+    - if(`${detail.details.numParkingSpaces}` === "null" || `${detail.details.numParkingSpaces}` === "[object Object]" || `${detail.details.numParkingSpaces}` === "" || `${detail.details.numParkingSpaces}` === "{}")
+      div(id="content") Number of Parking Space: "No Content to display"
+    -else
+      div(id="content") Number of Parking Space: #{detail.details.numParkingSpaces}
+    - if(`${detail.details.sqft}` === "[object Object]" || `${detail.details.sqft}` === "null" || `${detail.details.sqft}` === "" || `${detail.details.sqft}` === "{}")
+      div(id="content") Total Sq ft: "No Content to display"
+    -else
+      div(id="content") Total Sq ft: #{detail.details.sqft}
+    div(id="image-container")
+      - for(let i=0; i<`${detail.images.length}`; i++)
+        img(src=`https://cdn.repliers.io/${detail.images[i]}` width="200px" height="150px" alt="house image")
+    div 
+      img(src=`https://maps.googleapis.com/maps/api/staticmap?center=${detail.map.latitude},${detail.map.longitude}&size=600x600&key=AIzaSyBjOCNv93ogdi_FYhLr6wE3y7TnyzaU0Js&maptype=hybrid&zoom=15&markers=color:red|${detail.map.latitude},${detail.map.longitude}` alt="showing property area in google map" id="map")
