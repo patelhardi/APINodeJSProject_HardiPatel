@@ -55,7 +55,7 @@ function displayList(cname, res) {
         method: "GET",
         headers: {
           'Content-Type': 'application/json', 
-          'REPLIERS-API-KEY': 'SKoKOGhEO42QzdkZ1cowKgLGm2mwm4'
+          'REPLIERS-API-KEY': 'MyApiKey'
         }
       }
     ).then(function (response){
@@ -80,7 +80,7 @@ function displayList(cname, res) {
         method: "GET",
         headers: {
           'Content-Type': 'application/json', 
-          'REPLIERS-API-KEY': 'SKoKOGhEO42QzdkZ1cowKgLGm2mwm4'
+          'REPLIERS-API-KEY': 'MyApiKey'
         }
       }
     ).then(function (response){
