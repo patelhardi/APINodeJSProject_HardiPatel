@@ -23,4 +23,4 @@ block layout-content
       - for(let i=0; i<`${detail.images.length}`; i++)
         img(src=`https://cdn.repliers.io/${detail.images[i]}` width="200px" height="150px" alt="house image")
     div 
-      img(src=`https://maps.googleapis.com/maps/api/staticmap?center=${detail.map.latitude},${detail.map.longitude}&size=600x600&key=AIzaSyBjOCNv93ogdi_FYhLr6wE3y7TnyzaU0Js&maptype=hybrid&zoom=15&markers=color:red|${detail.map.latitude},${detail.map.longitude}` alt="showing property area in google map" id="map")
+      img(src=`https://maps.googleapis.com/maps/api/staticmap?center=${detail.map.latitude},${detail.map.longitude}&size=600x600&key=Myapikey&maptype=hybrid&zoom=15&markers=color:red|${detail.map.latitude},${detail.map.longitude}` alt="showing property area in google map" id="map")
